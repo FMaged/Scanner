@@ -9,6 +9,10 @@
             InitializeComponent();
         }
 
+        private void OnAddImageTapped(object sender, EventArgs e)
+        {
+            DisplayAlert("Tapped!", "You tapped the Add Pic.", "OK");
+        }
         private void CameraFrameTapped(object sender, EventArgs e) 
         {
             DisplayAlert("Tapped!", "You tapped the Camera frame.", "OK");
@@ -23,14 +27,6 @@
             DisplayAlert("Tapped!", "You tapped the Enter_Barcode frame.", "OK");
         }
 
-        private void BarcodesDetected(object sender, ZXing.Net.Maui.BarcodeDetectionEventArgs e)
-        {
-            var result= e.Results?.FirstOrDefault()?.Value;
-            if (result != null)
-            {
-                Console.WriteLine($"Detected barcode: {result}");
-            }
-        }
     }
 
 }

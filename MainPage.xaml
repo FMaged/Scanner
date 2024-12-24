@@ -3,20 +3,35 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:Zxing="clr-namespace:ZXing.Net.Maui.Controls;assembly=ZXing.Net.MAUI.Controls"
              x:Class="Scanner.MainPage"
-             Title="Scan Solutions"
-             BackgroundColor="White">
+             BackgroundColor="White"
+             NavigationPage.HasNavigationBar="False"
+             
+             >
+
 
     <ScrollView>
-        <VerticalStackLayout Padding="20"
-                             Spacing="15">
-            <Label Text="Scan a QR-Code OR Barcode"
-                FontSize="24"
-                HorizontalOptions="Center"
-                TextColor="Black"/>
-            
+        <VerticalStackLayout Spacing="15"
+                             Padding="10">
+
+            <Grid >
+                <Label Text="Scan a QR-Code OR Barcode"
+                       FontSize="20"
+                       HorizontalOptions="Center"
+                       TextColor="Black"
+                       Padding="0,15,30,0"/>
+                <Image Source="add_symbol.png"
+                       WidthRequest="60"
+                       HeightRequest="60"
+                       HorizontalOptions="End"
+                       Margin="0,0,0,0">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnAddImageTapped" />
+                    </Image.GestureRecognizers>
+                </Image>
+            </Grid>
             <Frame CornerRadius="10"
-                BackgroundColor="LightBlue"
-                Padding="10">
+                   BackgroundColor="LightBlue"
+                   Padding="10">
                 <Frame.GestureRecognizers>
                     <TapGestureRecognizer Tapped="CameraFrameTapped" />
                 </Frame.GestureRecognizers>
