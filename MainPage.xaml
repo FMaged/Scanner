@@ -17,8 +17,10 @@
             <Frame CornerRadius="10"
                 BackgroundColor="LightBlue"
                 Padding="10">
-                <StackLayout Orientation="Vertical"
-                             Spacing="10">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="CameraFrameTapped" />
+                </Frame.GestureRecognizers>
+                <VerticalStackLayout Spacing="10">
                     <Image Source="camera_symbol_for_button.png"
                            WidthRequest="30"
                            HeightRequest="30"
@@ -27,14 +29,16 @@
                            VerticalOptions="Center"/>
                     
 
-                </StackLayout>
-                
-                
+                </VerticalStackLayout>
+    
             </Frame>
             <Frame CornerRadius="10"
                    BackgroundColor="LightGreen">
-                <StackLayout Orientation="Vertical"
-                             Spacing="10">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="GallareyFrameTapped" />
+                </Frame.GestureRecognizers>
+                
+                <VerticalStackLayout Spacing="10">
                     <Image Source="images_symbol_for_button.png"
                            WidthRequest="30"
                            HeightRequest="30"
@@ -43,13 +47,15 @@
                            VerticalOptions="Center"/>
 
 
-                </StackLayout>
+                </VerticalStackLayout>
 
             </Frame>
             <Frame CornerRadius="10"
                    BackgroundColor="LightPink">
-                <StackLayout Orientation="Vertical"
-                             Spacing="10">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Enter_BarcodeFrameTapped" />
+                </Frame.GestureRecognizers>
+                <VerticalStackLayout Spacing="10">
                     <Image Source="keyboard_symbol_for_button.png"
                            WidthRequest="30"
                            HeightRequest="30"
@@ -58,7 +64,7 @@
                            VerticalOptions="Center"/>
 
 
-                </StackLayout>
+                </VerticalStackLayout>
 
             </Frame>
 
