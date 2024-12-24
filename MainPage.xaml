@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:Zxing="clr-namespace:ZXing.Net.Maui.Controls;assembly=ZXing.Net.MAUI.Controls"
+             x:Class="Scanner.MainPage"
+             Title="Scan Solutions"
+             BackgroundColor="White">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20"
+                             Spacing="15">
+            <Label Text="Scan a QR-Code OR Barcode"
+                FontSize="24"
+                HorizontalOptions="Center"
+                TextColor="Black"/>
+            
+            <Frame CornerRadius="10"
+                BackgroundColor="LightBlue"
+                Padding="10">
+                <StackLayout Orientation="Vertical"
+                             Spacing="10">
+                    <Image Source="camera_symbol_for_button.png"
+                           WidthRequest="30"
+                           HeightRequest="30"
+                           HorizontalOptions="Start"/>
+                    <Label Text="Scan QR or Barcode"
+                           VerticalOptions="Center"/>
+                    
+
+                </StackLayout>
+                
+                
+            </Frame>
+            <Frame CornerRadius="10"
+                   BackgroundColor="LightGreen">
+                <StackLayout Orientation="Vertical"
+                             Spacing="10">
+                    <Image Source="images_symbol_for_button.png"
+                           WidthRequest="30"
+                           HeightRequest="30"
+                           HorizontalOptions="Start"/>
+                    <Label Text="Select from the Gallarey"
+                           VerticalOptions="Center"/>
+
+
+                </StackLayout>
+
+            </Frame>
+            <Frame CornerRadius="10"
+                   BackgroundColor="LightPink">
+                <StackLayout Orientation="Vertical"
+                             Spacing="10">
+                    <Image Source="keyboard_symbol_for_button.png"
+                           WidthRequest="30"
+                           HeightRequest="30"
+                           HorizontalOptions="Start"/>
+                    <Label Text="Enter Barcode"
+                           VerticalOptions="Center"/>
+
+
+                </StackLayout>
+
+            </Frame>
+
+
+
+
+
+        </VerticalStackLayout>
+
+    </ScrollView>
+    
+</ContentPage>
